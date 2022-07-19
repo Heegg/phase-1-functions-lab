@@ -26,18 +26,17 @@ function distanceTravelledInFeet(start, destination){
 }
 
 function calculatesFarePrice(start, destination) {
-    const feet = distanceTravelledInFeet (start, destination)
-    if ( feet <= 400){
-      return 0
-    } else if( feet > 2500){
-      return 'cannot travel that far'
-    } else if( feet > 2000){ 
-      return 25 
-    } else if ( feet < 2000){
-      return 
-    }
-  }
- 
+  const feet = distanceTravelledInFeet (start, destination)
+  if ( feet <= 400){
+    return 0
+  } else if ( feet < 2000){
+    return 2.56
+  } else if( feet > 2500){
+    return 'cannot travel that far'
+  } else if( feet > 2000){ 
+    return 25 
+  } 
+}
 
   // call the distanceFromHqInBlocks function from inside the distanceFromHqInFeet function,
   // passing the argument from distanceFromHqInFeet into distanceFromHqInBlocks
